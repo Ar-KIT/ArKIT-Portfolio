@@ -1,12 +1,11 @@
 :root{
     --main-color: #0A1019;
-    --font-color1: #EEF0F2;
-    --font-color2: #ADBBC5;
-    --font-color3: #597DB3;
-    --font-color4: #839CBC;
-    --blue1: #214175;
-    --blue2: #193157;
-    --blue3: #0F1B2E;
+    --night-color: #090C08;
+    --state-gray: #70798C;
+    --lavender: #D6E3F8;
+    --seashell: #FEF5EF;
+    --UCLA-blue: #406E8E
+    --mint-green: #CBF7ED
 }
 /* TABLET */
 @media screen and (max-width: 768px) {
@@ -70,5 +69,46 @@
     }
     .menuContainer.active .callToAction button{
         font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .home{
+        justify-content: center;
+    }
+    .homeContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .homeContainer .typewriter{
+        display: flex;
+        flex-direction: column;
+    }
+    .homeContainer h2{
+        font-size: 1rem;
+    }
+    .typewriter div{
+        display: flex;
+        justify-content: center;
+    }
+    .typewriter{
+        font-size: clamp(1.5rem, 10vw, 1.7rem);
+    }
+    .homeContainer p{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .cursor {
+        width: 3px;
+        height:clamp(1rem, 10vw, 2rem);
+        background-color: #1B9AAA;
+        margin-left: 3px;
+        animation: blink-caret 1s step-end infinite;
+    }
+    .viewCV{
+        padding: 10px 25px;
+        font-size: 1rem;
     }
 }

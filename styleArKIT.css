@@ -1,12 +1,11 @@
 :root{
     --main-color: #0A1019;
-    --font-color1: #EEF0F2;
-    --font-color2: #ADBBC5;
-    --font-color3: #597DB3;
-    --font-color4: #839CBC;
-    --blue1: #214175;
-    --blue2: #193157;
-    --blue3: #0F1B2E;
+    --night-color: #090C08;
+    --state-gray: #70798C;
+    --lavender: #D6E3F8;
+    --seashell: #FEF5EF;
+    --glaucous: #577399;
+    --mint-green: #CBF7ED;
 }
 /* HTML || BODY */
 *{
@@ -28,9 +27,6 @@ body{
     flex-direction: column;
     justify-content: center;
 }
-.headerContainer, main{
-    width: clamp(320px, 90%, 1200px);
-}
 ::-webkit-scrollbar{
     display: none;
 }
@@ -40,10 +36,11 @@ header{
     height: 80px;
     width: 100%;
     top: 0;
-    background-color: var(--main-color);
+    background-color: var(--night-color);
     z-index: 10;
 }
 .headerContainer{
+    width: clamp(320px, 90%, 1200px);
     display: flex;
     align-items: center;
 
@@ -64,10 +61,10 @@ header{
     margin-right: auto;
 }
 .title span{
-    color: #CAE9FF;
+    color: var(--mint-greennt);
 }
 .title small{
-    color: #BEE9E8;
+    color: var(--mint-green);
 }
 .headerContainer .title small{
     font-size: 0.7rem;
@@ -80,7 +77,7 @@ header{
     bottom: -5px;
     left: 0px;
     z-index: -5;
-    border-top: 3px solid var(--font-color4);
+    border-top: 3px solid var(--seashell);
     transition: 0.5s;
 }
 .navLinkContainer {
@@ -111,7 +108,7 @@ header{
 }
 .navLinkContainer .navLink:hover p{
     cursor: pointer;
-    background-color: #193157;
+    background-color: var(--glaucous);
     border-radius: 0px 5PX;
 }
 .navLinkContainer .navLink div::after {
@@ -121,7 +118,7 @@ header{
     left: 0;
     width: 0;
     height: 5px;
-    background-color: var(--font-color2);
+    background-color: var(--glaucous);
     transition: width 0.2s ease;
 }
 .navLinkContainer .navLink:hover div::after{
@@ -131,7 +128,7 @@ header{
 .callToAction{
     position: relative;
     z-index: 1;
-    color: white;
+    color: var(--lavender);
 }
 .callToAction::before {
     content: '';
@@ -142,8 +139,8 @@ header{
     top: -5px;
     left: -5px;
     z-index: -5;
-    border-top: 3px solid var(--font-color4);
-    border-left: 3px solid var(--font-color4);
+    border-top: 3px solid var(--mint-green);
+    border-left: 3px solid var(--mint-green);
     transition: 0.5s;
 }
 .callToAction::after {
@@ -155,8 +152,8 @@ header{
     bottom: -5px;
     right: -5px;
     z-index: -5;
-    border-right: 3px solid var(--font-color4);
-    border-bottom: 3px solid var(--font-color4);
+    border-right: 3px solid var(--mint-green);
+    border-bottom: 3px solid var(--mint-green);
     transition: 0.5s;
 }
 .callToAction:hover::before {
@@ -171,7 +168,7 @@ header{
     padding: 10px 25px;
     font-size: 0.7rem;
     background: #0F1B2E;
-    color: #fff;
+    color: var(--lavender);
     border: none;
     cursor: pointer;
     font-family: inherit;
@@ -179,7 +176,7 @@ header{
     width: 100%;
 }
 .callToAction button:hover{
-    background-color: var(--blue2);
+    background-color: var(--glaucous);
 }
 
 .hamburger{
@@ -202,7 +199,7 @@ header{
     right: 0;
     height: 4px;
     border-radius: calc(4px / 2);
-    background: var(--font-color1);
+    background: var(--lavender);
     color: inherit;
     opacity: 1;
     transition: none 0.35s cubic-bezier(.5,-0.35,.35,1.5) 0s;
@@ -244,46 +241,64 @@ header{
     display: none;
 }
 
+.triangle{
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-right: 150px solid transparent;
+    border-bottom: 150px solid #70798C;
+    transition: 1s ease-in-out;
+}
 /* =========== MAIN =========== */
 main{
-    margin-top: 60px;
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-inline: auto;
     z-index: 8;
 }
-
 .home{
     height: calc(100vh - 60px);
-    background: linear-gradient(to right, var(--main-color)5%, transparent 100%), url(images/home-bg.jpg) no-repeat center top;
+    background: linear-gradient(to right, var(--night-color) 10%, transparent 100%), url(Assets/Images/home-bg.jpg) no-repeat center top;
     background-size: cover;
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+.homeContainer{
+    width: clamp(320px, 90%, 1200px);
+    margin-inline: auto;
+    position: relative;
+}
 .typewriter{
     display: flex;
     height: auto;
     flex-wrap: wrap;
-    font-size: 3.5rem;
+    font-size: clamp(1rem, 10vw, 3.5rem);
+    overflow: hidden;
 }
 .type span{
-    color: #47A8BD;
+    color: #1B9AAA;
 }
-.home p{
-    width: 50%;
-    font-size: 1.1rem;
+.homeContainer p{
+    width: clamp(250px, 100%, 850px);
+    font-size: clamp(0.8rem, 2.5vw, 1.2rem);
     letter-spacing: 0.1rem;
-    color: var(--font-color1);
+    color: var(--seashell);
     margin-block: 10px 50px;
     line-height: 1.5;
 }
+.typewriter div{
+    display: flex;
+    flex-wrap: nowrap;
+}
 .cursor {
     width: 5px;
-    height: 85%;
-    background-color: #47A8BD;
+    height:clamp(1rem, 10vw, 3.5rem);
+    background-color: #1B9AAA;
     margin-left: 3px;
     animation: blink-caret 1s step-end infinite;
 }
