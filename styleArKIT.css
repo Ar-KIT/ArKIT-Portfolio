@@ -20,9 +20,7 @@
 
 /* ============== BODY ========================== */
 body{
-    background-color: var(--main-color);
     width: 100%;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -252,6 +250,7 @@ header{
 }
 /* =========== MAIN =========== */
 main{
+    background-color: var(--night-color);
     margin-top: 80px;
     display: flex;
     flex-direction: column;
@@ -265,13 +264,12 @@ main{
     background-size: cover;
     width: 100vw;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .homeContainer{
     width: clamp(320px, 90%, 1200px);
     margin-inline: auto;
-    position: relative;
 }
 .typewriter{
     display: flex;
