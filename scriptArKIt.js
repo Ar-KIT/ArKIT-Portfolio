@@ -1,3 +1,13 @@
+//HEADER -  SCROLL
+window.addEventListener('scroll', function() {
+    let header = document.querySelector('.header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
 //HAMBURGER - HEADER
 const checkbox = document.getElementById('checkbox');
 const menuContainer = document.querySelector('.menuContainer');
@@ -51,3 +61,5 @@ function typeWriter(element, text){
 setTimeout(() => {
     typeWriter(typeElement, texts[0]);
 }, 2000);
+
+
