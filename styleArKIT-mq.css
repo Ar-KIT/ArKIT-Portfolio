@@ -91,6 +91,15 @@
         padding-inline: 0;
         margin-top: 20px;
     }
+    .background div{
+        padding-inline: 10px 0;
+    }
+    .background div h4{
+        font-size: clamp(1.1rem, 0.3759rem + 2.7586vw, 1.7rem);
+    }
+    .background div p{
+        font-size: clamp(0.9rem, 0.2966rem + 2.2989vw, 1.4rem);
+    }
 }
 
 
