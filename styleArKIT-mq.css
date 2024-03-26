@@ -24,14 +24,14 @@
     .menuContainer {
         display: none;
         position: fixed;
-        top: 80px;
+        top: 0;
         left: 0;
         width: 100%;
         height: 0;
         background-color: #23395B;
         z-index: 9;
         overflow: hidden;
-        padding: 20px 40px;
+        padding: 80px 40px 20px 40px;
         animation: fadeIn 0.5s ease;
     }
     @keyframes fadeIn {
@@ -100,6 +100,7 @@
     .background div p{
         font-size: clamp(0.9rem, 0.2966rem + 2.2989vw, 1.4rem);
     }
+    
 }
 
 
@@ -144,4 +145,37 @@
         padding: 10px 25px;
         font-size: 1rem;
     }
+    .home .triangle1{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-top: 50px solid transparent;
+        border-left: 50px solid var(--state-gray);
+    }
+    .horizontal-line {
+        position: absolute;
+        bottom: 5%;
+        left: auto;
+        width: 75%;
+        max-width: 1200px;
+        height: 3px;
+        background-color: var(--lavender);
+    }
+    .homeContainer .skillsContainer .imgContainer{
+        height: 2.5rem;
+        width: 2.5rem;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .homeContainer .skillsContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
 }
